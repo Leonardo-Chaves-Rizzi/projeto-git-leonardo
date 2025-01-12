@@ -1,14 +1,22 @@
-name = input("Qual é o seu nome: ")
-primeiraNota = float(input("Digite a primeira nota da prova: "))
-segundaNota = float(input("Digite a segunda nota da prova: "))
-terceiraNota = float(input("Digite a terceira nota da prova: "))
+nome = input("Qual é o seu nome: ")
 
-media = (primeiraNota + segundaNota + terceiraNota) / 3
+while True:
+    primeiraNota = float(input("Digite a primeira nota da prova: "))
+    segundaNota = float(input("Digite a segunda nota da prova: "))
+    terceiraNota = float(input("Digite a terceira nota da prova: "))
 
-if media >= 6:
-    situacao = "aprovado"
+    media = (primeiraNota + segundaNota + terceiraNota) / 3
 
-else:
-    situacao = "reprovado"
+    if primeiraNota > 10 or segundaNota > 10 or terceiraNota > 10:
+        print("Digite novamente as notas!")
+        continue
+    else:
+        if media >= 6:
+            situacao = "aprovado"
+            break
 
-print(f"{name} suas notas foram\nNota 1: {primeiraNota}\nNota 2: {segundaNota}\nNota 3: {terceiraNota}\nMédia: {media:.2f}\nDe acordo com sua média, você está {situacao}!")
+        else:
+            situacao = "reprovado"
+            break
+
+print(f"{nome} suas notas foram\nNota 1: {primeiraNota}\nNota 2: {segundaNota}\nNota 3: {terceiraNota}\nMédia: {media:.2f}\nDe acordo com sua média, você está {situacao}!")

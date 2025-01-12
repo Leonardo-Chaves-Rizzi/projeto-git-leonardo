@@ -1,4 +1,14 @@
-nome = input("Qual é o seu nome: ")
+while True:
+    nome = input("Qual é o seu nome: ")
+
+    if nome.isalpha():
+        break
+    else:
+        print("O nome deve conter apenas letras!")
+
+print("-" * 15)
+print(f"Olá {nome}!")
+print("-" * 15)
 
 while True:
     primeiraNota = float(input("Digite a primeira nota da prova: "))
